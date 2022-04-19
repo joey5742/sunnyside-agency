@@ -1,0 +1,1182 @@
+/*
+Author: Joey S
+Date: 4/1/2022
+File Name: styles.css
+*/
+/* CSS Reset */
+body, header, nav, main, footer, h1, h2, h3, h4, h5, h6, div, img, ul, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for box sizing applies to all elements */
+
+html {
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit; 
+}
+
+
+body {
+    max-width: 100%; 
+    height: auto; 
+}
+
+img {
+    max-width: 100%;
+
+}
+
+/* ---------------------------------------- */
+/* FOLLOWING STYLES ARE FOR MOBILE SCREENS */
+/* ---------------------------------------- */
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 699px)  {
+
+.container {
+    max-width: 700px;
+}
+
+.desktoph, .desktop, .tablet-desktop {
+    display: none; 
+}
+
+.grid1 > .frame1 {
+    display: none; 
+}
+
+.grid1 > .frame2 {
+    display: none; 
+}
+
+/* Style rules for mobile navigation menu */
+
+#menu-links{
+    top: 5%;
+    left:7%;
+    position: absolute;
+    background-color: white ; 
+    padding: 10% 30% 10% 30%;
+    border: white solid 3px; 
+    z-index:2;
+}
+
+/* #menu-links:after {
+    position: relative; 
+    border-color: transparent white transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 20px;
+    top: -303px;
+    content: " ";
+    display: block;
+    right: -140%;
+    z-index:3;
+} */
+
+.mobile-nav a {
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color: hsl(210, 4%, 67%);
+    font-size: 1.25em;
+    text-decoration: none;
+    line-height: 3;
+    padding: 2%;
+    display: block; 
+}
+
+.mobile-nav a:nth-child(4) {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1em; 
+    margin: 0% -20%;
+    color: hsl(167, 40%, 24%);
+    background-color: hsla(51, 100%, 49%, 0.9);
+    border-radius: 20px;
+}
+
+/* Style rules for hamburger menu */
+.menu-icon {
+    display: block;
+    position: absolute;
+    right: .5em;
+    z-index: 1; 
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile{
+    display: block;
+}
+
+header  {
+    position: absolute; 
+    z-index:1;
+    margin-left:1.2em;
+}
+
+header img {
+    margin: 2em 1em;
+    
+}
+
+/* Style rules for Hero Image which is half an orange with an arrow */
+
+#hero {
+    max-width: 700px; 
+    position: relative; 
+}
+
+#hero .mobileh {
+    max-width: 100%;
+    height: 50%; 
+    display: inline-block;
+}
+
+#hero h1 {
+    position: absolute; 
+    top: 20%;
+    display: block;
+    width: 100%;
+    height: auto; 
+    text-align: center;
+    overflow: auto;
+    color: white; 
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 2.5em;
+    letter-spacing: 0.5rem; 
+    z-index: 1;
+}
+
+#hero .arrow {
+    position: absolute; 
+    top: 54%;
+    left: 46%; 
+}
+
+/* Styling for items below Hero Image */
+
+figure {
+    position:relative;
+    display: block; 
+    max-width: 100%;
+}
+
+.frame2:nth-child(1) {
+    margin-top: -4px;
+}
+
+.mobile > .frame1{
+    position:relative;
+    display: block; 
+    max-width: 100%;
+    padding: 10%; 
+    background-color: hsl(0, 0%, 100%);
+}
+
+.mobile > .frame1 h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 2em;
+    text-align: center;
+}
+
+.mobile > .frame1 p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    color: hsl(210, 4%, 67%);
+    text-align: center;
+}
+
+/* Styling for Learn More Links */
+
+.learn1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    text-decoration: none; 
+    display: block;
+    width: 100%; 
+    text-align: center;
+}
+
+.learn1:after {
+    content: " ";
+    position: absolute;
+    z-index: 2;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.35);
+    border-radius: 10px;
+    margin: 0.75em 0 0 -8em; 
+}
+
+.learn1:hover::after {
+    content: " ";
+    position: absolute;
+    z-index: 2;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.9);
+    border-radius: 10px;
+    margin: 0.75em 0 0 -8em;  
+}
+
+.learn2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+   text-decoration: none;
+   display: block; 
+   width: 100%; 
+   text-align: center;  
+}
+
+.learn2:after {
+    content: " ";
+    position: absolute;
+    z-index: 2;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.5);
+    border-radius: 10px;
+    margin: 0.75em 0 0 -8em; 
+}
+
+.learn2:hover::after {
+    content: " ";
+    position: absolute;
+    z-index: 2;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.9);
+    border-radius: 10px;
+    margin: 0.75em 0 0 -8em; 
+}
+
+/* Styling for Graphic Design and Photography Images */
+.frame3 {
+    position: relative; 
+    object-fit: cover; 
+    width: 100%; 
+    max-height: 100%;
+}
+
+h4 {
+    position: absolute; 
+    list-style-type: none; 
+    top: 70%; 
+    width: 100%; 
+    text-align: center;  
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 1.5em; 
+}
+
+.frame3 p {
+    position: absolute; 
+    top: 75%;
+    left: 5%; 
+    right: 5%; 
+    text-align: center; 
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.graphic {
+    color: hsl(167, 40%, 24%);
+}
+
+.photo {
+    color: hsl(192, 62%, 26%);
+}
+
+
+/* Styling for Testimonals using flex*/
+.testimonial {
+    margin: 10% 0%; 
+}
+
+.testimonial > h5 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    /* font-size: 1.25em;  */
+    letter-spacing: 0.25rem; 
+    color: hsl(210, 4%, 67%);
+    margin: 0 0 5% 0%; 
+}
+
+.grid2 {
+    display: flex;
+    flex-direction: column; 
+}
+
+.test1 {
+    flex: 30%;
+    margin: 3%; 
+}
+
+.test1 > img {
+    border-radius: 50%; 
+    /* justify-content: center;  */
+    display: block;
+    margin: 10% auto; 
+}
+
+.quote {
+    text-align: center; 
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    font-size: 1.1em;
+    margin: 0 3%;
+
+    color: hsl(213, 9%, 39%);
+}
+
+.test1 > h6 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.25em; 
+    margin-top: 5%; 
+}
+
+.title {
+    margin-top: 1%;
+    text-align: center;  
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 70%);
+}
+
+/* Styling last four images using flex */
+.grid3 {
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.grid3 > img {
+    width: 50%; 
+    height: auto; 
+}
+
+/* Styling for Footer Elements */
+footer {
+    background-color: hsl(205, 12%, 81%);
+}
+
+.bot-logo img {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 10%; 
+    width: 50%; 
+    filter: brightness(30%) sepia(.5) hue-rotate(25deg) saturate(2);
+    opacity: 0.7; 
+}
+
+.bottom-nav ul {
+    list-style-type: none; 
+    text-align: center;
+    margin: 3% 0;
+}
+
+.bottom-nav li {
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    color: white; 
+    padding: 0.5em 2em;
+}
+
+.bottom-nav li a {
+    color: hsl(168, 34%, 41%);
+    text-decoration: none; 
+}
+
+.bottom-nav li a:hover {
+    color: white; 
+}
+
+.social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 50%;  
+    padding: 10% 0;
+}
+
+.social img {
+    display: inline-block;
+    padding: 5%;
+}
+
+.social img:hover {
+    filter: invert(48%) saturate(100%) hue-rotate(50deg) brightness(200%) contrast(200%);
+}
+}
+
+/* ---------------------------------------- */
+/* FOLLOWING STYLES ARE FOR TABLET SCREENS */
+/* ---------------------------------------- */
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 700px) and (max-width: 1250px) {
+
+.container {
+        min-width: 700px; 
+        max-width: 1250px;
+}
+    
+.mobile-nav, .desktop, .mobileh {
+        display: none; 
+}
+
+.mobile > .frame1 {
+    display:none;
+}
+
+.mobile > .frame2 {
+    display:none;
+}
+   /* Style rule for navigation */
+.tablet-desktop {
+    position: absolute; 
+}
+
+nav {  
+    position: absolute;   
+    display: flex; 
+    left: 55%; 
+    margin: 2em auto;
+    max-width: 1250px;
+    width: auto; 
+    z-index: 1;
+}
+
+nav ul {
+    display: flex; 
+    list-style-type: none; 
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    color: white; 
+}
+
+nav li a {
+    padding: 10px 10px; 
+    color: white; 
+    text-decoration: none; 
+}
+
+nav li a:hover {
+    padding: 10px 10px; 
+    background-color: hsla(0,0%,100%,0.3);
+    font-weight: 900; 
+    border-radius: 20px; 
+}
+
+.contact {
+    /* padding: 10px 10px;  */
+    color: black;
+    font-weight: 900;
+    margin: 4px 4px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.contact:hover {
+    padding: 10px 10px; 
+    background-color: hsla(0,0%,100%,0.3);
+    color: white; 
+}
+ 
+    header  {
+        position: absolute; 
+        z-index:1;
+        margin-left:1.2em;
+    }
+    
+    header img {
+        margin: 2em 1em;      
+    }
+    
+    /* Style rules for Hero Image which is half an orange with an arrow */
+    #hero {
+        position: relative;
+        max-width: 1250px; 
+    }
+   
+    #hero .desktoph {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    
+    #hero h1 {
+        position: absolute; 
+        top: 20%;
+        display: block;
+        width: 100%; 
+        text-align: center;
+        overflow: auto;
+        color: white; 
+        font-family: 'Fraunces', serif;
+        font-weight: 900; 
+        font-size: 2.5em;
+        letter-spacing: 0.5rem; 
+        z-index: 1;
+    }
+    
+    #hero .arrow {
+        position: absolute; 
+        top: 40%;
+        left: 47%; 
+    }
+    
+    /* Styling for the Four Frames that come after hero using grid */
+
+.mastergrid {
+    min-width: 700px;
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid1 {
+    flex-grow: 1; 
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 50% auto;
+} 
+
+.frame1{
+    position:relative;
+    max-width: 100%;
+    padding: 15% 10% 0% 10%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.frame1 h2 {
+    text-align: center; 
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 1.75em;
+}
+
+.frame1 p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    color: hsl(210, 4%, 67%);
+}
+
+.frame2 {
+    margin: -4px 0;
+    object-fit: cover; 
+    max-width: 750px; 
+    width: 100%;
+}
+
+/* Styling for Learn More Links */
+.learn1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+   text-decoration: none; 
+}
+
+.learn1:after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.35);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn1:hover::after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.9);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+   text-decoration: none; 
+}
+
+.learn2:after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.5);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn2:hover::after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.9);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+    
+    /* Styling for Graphic Design and Photography Images */
+    .frame3 {
+        position: relative; 
+        object-fit: cover; 
+        width: 100%; 
+        max-height: 100%;
+    }
+    
+    h4 {
+        position: absolute; 
+        list-style-type: none; 
+        top: 70%; 
+        width: 100%; 
+        text-align: center;  
+        font-family: 'Fraunces', serif;
+        font-weight: 900; 
+        font-size: 1.5em; 
+       
+    }
+    
+    .frame3 p {
+        position: absolute; 
+        top: 75%;
+        left: 5%; 
+        right: 5%; 
+        text-align: center; 
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    
+    .graphic {
+        color: hsl(167, 40%, 24%);
+    }
+    
+    .photo {
+        color: hsl(192, 62%, 26%);
+    }
+    
+    
+    /* Styling for Testimonals using flex*/
+    .testimonial {
+        margin: 10% 0%; 
+    }
+    
+    .testimonial > h5 {
+        text-align: center;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 1.75em; 
+        letter-spacing: 0.25rem; 
+        color: hsl(210, 4%, 67%);
+        margin: 0 0 5% 0%; 
+    }
+    
+    .grid2 {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .test1 {
+        flex: 30%;
+        margin: 3%; 
+    }
+    
+    .test1 > img {
+        border-radius: 50%; 
+        /* justify-content: center;  */
+        display: block;
+        margin: 5% auto; 
+    }
+    
+    .quote {
+        text-align: center; 
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        line-height: 1.25;
+        font-size: 1.1em;
+        margin: 0 3%;
+        color: hsl(213, 9%, 39%);
+    }
+    
+    .test1 > h6 {
+        text-align: center;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 1.25em; 
+        margin-top: 2%; 
+    }
+    
+    .title {
+        margin-top: 1%;
+        text-align: center;  
+        font-family: 'Barlow', sans-serif;
+        color: hsl(210, 4%, 70%);
+    }
+    
+    /* Styling last four images using flex */
+    .grid3 {
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    
+    .grid3 > img {
+        width: 50%; 
+        height: auto; 
+    }
+    
+    /* Styling for Footer Elements */
+    footer {
+        background-color: hsl(205, 12%, 81%);
+    }
+    
+    .bot-logo img {
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top: 10%; 
+        width: 50%; 
+        filter: brightness(30%) sepia(.5) hue-rotate(25deg) saturate(2);
+        opacity: 0.7; 
+    }
+    
+    .bottom-nav ul {
+        list-style-type: none; 
+        text-align: center;
+        margin: 3% 0;
+    }
+    
+    .bottom-nav li {
+        display: inline-block;
+        font-family: 'Barlow', sans-serif;
+        color: white; 
+        padding: 0.5em 2em;
+    }
+    
+    .bottom-nav li a {
+        color: hsl(168, 34%, 41%);
+        text-decoration: none; 
+    }
+    
+    .bottom-nav li a:hover {
+        color: white; 
+    }
+    
+    .social {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 50%;  
+        padding: 10% 0;
+    }
+    
+    .social img {
+        display: inline-block;
+        padding: 5%;
+    }
+    
+    .social img:hover {
+        filter: invert(48%) saturate(100%) hue-rotate(50deg) brightness(200%) contrast(200%);
+    }
+    }
+/* ---------------------------------------- */
+/* FOLLOWING STYLES ARE FOR DESKTOP SCREENS */
+/* ---------------------------------------- */
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1251px), print {
+
+
+.container {
+    max-width: 1440px;
+}
+
+.mobile-nav, .mobile, .mobileh, .pic1m, .pic2m, .pic3m, .pic4m {
+    display: none; 
+}
+
+/* Style rule for navigation */
+.tablet-desktop {
+    position: absolute; 
+}
+
+nav {    
+    display: flex; 
+    flex-direction: row;
+    left: 65%;
+    margin: 2em 1em 0 1.2em;
+    max-width: 500px; 
+    z-index: 1;
+}
+nav ul {
+    list-style-type: none; 
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    color: white; 
+}
+
+nav li a {
+    padding: 10px 20px; 
+    color: white; 
+    text-decoration: none; 
+}
+
+nav li a:hover {
+    padding: 10px 20px; 
+    background-color: hsla(0,0%,100%,0.3);
+    font-weight: 900; 
+    border-radius: 20px; 
+}
+
+.contact {
+    color: black;
+    font-weight: 900;
+    margin: 4px 4px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.contact:hover {
+    padding: 10px 20px; 
+    background-color: hsla(0,0%,100%,0.3);
+    color: white; 
+}
+
+/* Style rule for header */
+header {
+    position: absolute; 
+    z-index:1;
+    margin-left:1.2em;
+}
+
+header img {
+    margin: 2em 1em; 
+}
+
+/* Style rules for Hero Image which is half an orange with an arrow */
+.masterhero {
+    min-width: 1000px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#hero {
+    position: relative; 
+    display: inline; 
+}
+#hero .desktoph {
+    object-fit: cover; 
+    max-width: 100%; 
+    height: auto; 
+    display: inline-block;
+}
+
+
+#hero h1 {
+    position: absolute; 
+    top: 20%;
+    width: 100%; 
+    text-align: center;
+    color: white; 
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 3em;
+    letter-spacing: 0.5rem; 
+    z-index: 1;
+}
+
+#hero .arrow {
+    position: absolute; 
+    top: 42%;
+    left: 48.5%; 
+}
+
+/* Styling for the Four Frames that come after hero using grid */
+
+.mastergrid {
+    min-width: 1000px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid1 {
+    flex-grow: 1; 
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 720px 720px;
+} 
+
+.frame1{
+    position:relative;
+    max-width: 100%;
+    padding: 22.5%; 
+    background-color: hsl(0, 0%, 100%);
+}
+
+.frame1 h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 2.25em;
+}
+
+.frame1 p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    color: hsl(210, 4%, 67%);
+}
+
+.frame2 {
+    margin: -4px 0;
+    object-fit: cover; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Styling for Learn More Links */
+.learn1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+   text-decoration: none; 
+}
+
+.learn1:after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.35);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn1:hover::after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(51, 100%, 49%, 0.9);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+   text-decoration: none; 
+}
+
+.learn2:after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.5);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+.learn2:hover::after {
+    content: " ";
+    display: block;
+    width: 8.5em;
+    height: 0.5em;
+    background-color: hsla(7, 99%, 70%, 0.9);
+    border-radius: 10px;
+    margin: -0.5em 0 0 -0.6em; 
+}
+
+
+/* Styling for Graphic Design and Photography Images */
+.frame3 {
+    position: relative; 
+    object-fit: cover; 
+    width: 100%; 
+    max-height: 100%;
+}
+
+.frame3 > h4 {
+    position: absolute; 
+    top: 68%; 
+    left: 35%; 
+    text-align: center; 
+    font-family: 'Fraunces', serif;
+    font-weight: 900; 
+    font-size: 1.75em; 
+   
+}
+
+.frame3 > p {
+    position: absolute; 
+    top: 75%;
+    left: 25%; 
+    right: 25%; 
+    text-align: center; 
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.graphic {
+    color: hsl(167, 40%, 24%);
+}
+
+.photo {
+    color: hsl(192, 62%, 26%);
+}
+
+
+/* Styling for Testimonals using flex*/
+.testimonial {
+    margin: 10% 0%; 
+}
+
+.testimonial > h5 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.25em; 
+    letter-spacing: 0.5rem; 
+    color: hsl(210, 4%, 67%);
+    margin: 0 0 5% 0%; 
+}
+
+.grid2 {
+    display: flex;
+    flex-direction: row; 
+}
+
+.test1 {
+    flex: 30%;
+    margin: 1.5%; 
+}
+
+.test1 > img {
+    border-radius: 50%; 
+    /* justify-content: center;  */
+    display: block;
+    margin: 10% auto; 
+}
+
+.quote {
+    text-align: center; 
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    color: hsl(213, 9%, 39%);
+}
+
+.test1 > h6 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.25em; 
+    margin-top: 15%; 
+}
+
+.title {
+    margin-top: 2%;
+    text-align: center;  
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 70%);
+}
+
+/* Styling last four images using flex */
+.grid3 {
+    display: flex;
+    flex-direction: row;  
+}
+
+.grid3 > img {
+    flex: 25%; 
+    width: 25%; 
+    object-fit: cover;
+    height: auto; 
+}
+
+/* Styling for Footer Elements */
+footer {
+    background-color: hsl(205, 12%, 81%);
+}
+
+.bot-logo {
+    display: block;
+    margin: 0% auto;
+    padding-top: 5%; 
+    width: 10%;
+    filter: brightness(30%) sepia(.5) hue-rotate(25deg) saturate(2);
+    opacity: 0.7; 
+}
+
+.bottom-nav ul {
+    list-style-type: none; 
+    text-align: center;
+    margin: 3% 0;
+}
+
+.bottom-nav li {
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    color: white; 
+    padding: 0.5em 2em;
+}
+
+.bottom-nav li a {
+    color: hsl(168, 34%, 41%);
+    text-decoration: none; 
+}
+
+.bottom-nav li a:hover {
+    color: white; 
+}
+
+.social {
+    display: block;
+    margin: 0 auto;
+    width: 17%;  
+    padding: 2%;
+}
+
+.social img {
+    display: inline-block;
+    padding: 5%;
+}
+
+.social img:hover {
+    filter: invert(48%) saturate(100%) hue-rotate(50deg) brightness(200%) contrast(200%);
+}
+}
